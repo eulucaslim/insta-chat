@@ -7,6 +7,9 @@ router = routers.DefaultRouter()
 router.register('get_all_followers', views.GetAllFollowersViewSet,
                 basename='get_all_followers')
 
+router.register('login', views.LoginInstaViewSet,
+                basename='login')
+
 urlpatterns = [
     path('', include(router.urls))
 ]
